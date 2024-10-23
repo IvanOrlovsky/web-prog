@@ -5,13 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ресурсы - Форум разработчиков</title>
 		<link href="./dist/output.css" rel="stylesheet" />
+		<script src="./script.js"></script>
 	</head>
 	<body>
 		<header>
 			<h1 style="color: white">Форум разработчиков</h1>
 		</header>
 
-		<nav>
+		<button id="toggleMenuBtn" onclick="toggleMenu()">Открыть меню</button>
+		<nav id="mainMenu" style="display: none">
 			<ul>
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="discussions.html">Обсуждения</a></li>

@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Форум разработчиков</title>
 		<link href="./dist/output.css" rel="stylesheet" />
+		<script src="./script.js"></script>
 	</head>
 	<body>
 		<header>
@@ -48,23 +49,5 @@
 		<footer>
 			<p>&copy; 2024 Форум разработчиков. Все права защищены.</p>
 		</footer>
-
-		<script>
-			function toggleMenu() {
-				var menu = document.getElementById("mainMenu");
-				menu.style.display =
-					menu.style.display === "none" ? "block" : "none";
-			}
-
-			function validateEmail() {
-				var email = document.getElementById("email").value;
-				if (!email.includes("@")) {
-					alert("Введите корректный email.");
-					return false;
-				}
-				alert("Спасибо за подписку!");
-				return true;
-			}
-		</script>
 	</body>
 </html>
