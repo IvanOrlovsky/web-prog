@@ -45,6 +45,25 @@
 			</section>
 		</main>
 
+		<h2>Наша команда</h2>
+		<div class="gallery" id="gallery"></div>
+
+		<div id="modal">
+			<span
+				onclick="closeModal()"
+				style="
+					color: white;
+					cursor: pointer;
+					position: absolute;
+					top: 10px;
+					right: 10px;
+					font-size: 30px;
+				"
+				>&times;</span
+			>
+			<img id="modalImage" src="" alt="Увеличенное изображение" />
+		</div>
+
 		<aside>
 			<h3>Популярные темы</h3>
 			<ul>
@@ -77,6 +96,43 @@
 				alert("Ваше сообщение отправлено!");
 				return true;
 			}
+
+			function showImage(src) {
+				document.getElementById("modalImage").src = src;
+				document.getElementById("modal").style.display = "block";
+			}
+
+			function closeModal() {
+				document.getElementById("modal").style.display = "none";
+			}
+
+			// Функция для загрузки изображений с Unsplash API
+			function loadImages() {
+				const gallery = document.getElementById("gallery");
+				const unsplashAPI =
+					"https://api.unsplash.com/photos/random/?client_id=CBtMIrjxvaJarv1h9Di_9oLWCmGktJjZ05DYOf-4IYc&count=5";
+
+				fetch(unsplashAPI)
+					.then((response) => response.json())
+					.then((images) => {
+						images.forEach((image) => {
+							const img = document.createElement("img");
+							img.src = image.urls.thumb;
+							img.alt = image.alt_description;
+							img.onclick = () => showImage(image.urls.full);
+							gallery.appendChild(img);
+						});
+					})
+					.catch((error) => {
+						console.error(
+							"Ошибка при загрузке изображений:",
+							error
+						);
+					});
+			}
+
+			// Вызов функции для загрузки изображений при загрузке страницы
+			window.onload = loadImages;
 		</script>
 	</body>
 </html>
