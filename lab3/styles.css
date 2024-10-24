@@ -71,3 +71,15 @@ a {
 #main-article {
 	@apply font-[1.2em] leading-[1.6];
 }
+
+form {
+	@apply w-[50%] mx-auto p-10 bg-[#007bff] rounded-xl border-2 border-[#1b4068] flex flex-col gap-1;
+}
+
+form input {
+	@apply w-full p-3 rounded-md border-2 border-[#1b4068];
+}
+
+form input[type="submit"] {
+	@apply w-full p-3 rounded-md bg-[#fff] text-[#007bff] border-2 border-[#1b4068] hover:bg-[#007bff] hover:text-[#fff];
+}
