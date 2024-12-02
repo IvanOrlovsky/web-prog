@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ресурсы - Форум разработчиков</title>
+		<link href="./dist/output.css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="./script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1 style="color: white">Форум разработчиков</h1>
+		</header>
+
+		<button id="toggleMenuBtn" onclick="toggleMenu()">Открыть меню</button>
+		<nav id="mainMenu" style="display: none">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="discussions.html">Обсуждения</a></li>
+				<li><a href="qa.html">Вопросы и ответы</a></li>
+				<li><a href="projects.html">Проекты</a></li>
+				<li><a href="resources.html">Ресурсы</a></li>
+				<li><a href="profile.html">Профиль</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<section>
+				<h2>Полезные ресурсы для разработчиков</h2>
+				<ul>
+					<li>
+						<a href="https://developer.mozilla.org/"
+							>MDN Web Docs</a
+						>
+						- отличное руководство по веб-разработке
+					</li>
+					<li>
+						<a href="https://stackoverflow.com/">Stack Overflow</a>
+						- крупнейшее сообщество для разработчиков
+					</li>
+					<li>
+						<a href="https://github.com/">GitHub</a> - платформа для
+						размещения и управления проектами
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<aside>
+			<h3>Популярные темы</h3>
+			<ul>
+				<li><a href="#">JavaScript - последние обновления</a></li>
+				<li><a href="#">React Native: советы и трюки</a></li>
+				<li><a href="#">Python для анализа данных</a></li>
+			</ul>
+		</aside>
+
+		<footer>
+			<p>&copy; 2024 Форум разработчиков. Все права защищены.</p>
+		</footer>
+	</body>
+</html>
